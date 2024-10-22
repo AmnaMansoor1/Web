@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD with jQuery AJAX</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <h1>User Management</h1>
+
+    <!-- Create/Update User Form -->
+    <form id="userForm">
+        <input type="hidden" id="userId">
+        <input type="text" id="name" placeholder="Enter Name" required>
+        <input type="email" id="email" placeholder="Enter Email" required>
+        <button type="submit">Save</button>
+    </form>
+
+    <!-- List of Users -->
+    <h2>Users List</h2>
+    <ul id="usersList"></ul>
+</body>
+</html>
