@@ -193,6 +193,16 @@ body {
     max-width: calc(25% - 40px);
     text-align: center;
 }
+.circular-img-container {
+    width: 100%; /* Make the image container fill the square */
+    height: 100%; /* Ensure it fills the height */
+    border-radius: 50%; /* Make the image circular */
+    overflow: hidden; /* Hide overflow content */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
 
 .circular-collection-circle {
     width: 150px;
@@ -217,6 +227,16 @@ body {
     margin-top: 10px;
     color: #333;
 }
+.circular-img {
+    width: 80%; /* Control image size */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s;
+}
+
+.circular-collection-item:hover .circular-img {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
 .categories {
     text-align: center; /* Center align the heading */
 }
