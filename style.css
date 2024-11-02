@@ -1,4 +1,5 @@
 /* Reset default styles */
+/* Reset default styles */
 * {
     margin: 0;
     padding: 0;
@@ -11,27 +12,133 @@ body {
     line-height: 1.6;
 }
 
-/* Header Styles */
+/* Notification bar */
+.notification-bar {
+    background-color: rgb(255, 255, 255);
+    color: rgb(244, 14, 14);
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
+}
+
 .header {
+    width: 100%;
+}
+
+/* Top Bar */
+.top-bar {
+    height: 50px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    background-color: black;
+    padding: 5px; /* Reduced padding */
+    color: white;
+}
+
+.contact-icons {
+    display: flex;
+    color: white;
+    gap: 15px; /* Use gap instead of margins for spacing */
+   
+    font-size: 18px;
+}
+.phoneicon {
+    margin: 0; /* Remove any extra margin around the phone icon */
+}
+
+
+.logo img {
+    margin: auto;
+    height: 5vh;
+    width: 20vw;
+}
+/* Center Logo */
+.logo {
+    margin: auto; /* Centers logo */
+    margin-left: 12%;
+}
+
+.search-bar {
+    margin-left: 1%;
+    display: flex;
+    background-color: white;
+    border-radius: 25px;
+    padding: 5px 10px;
+    width: 250px;
+    height:30px ;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: black;
+}
+
+.cart-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-section a {
+    color: white;
+    margin-right: 10px;
+    font-size: 18px;
+    position: relative;
+}
+
+.cart-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-size: 10px;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+}
+
+.currency {
+    color: white;
+    margin-right: 10px;
+}
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
     background-color: #f8f8f8;
-    border-bottom: 1px solid #ddd;
-}
-
-.logo img {
-    height: 50px;
+    padding: 10px 20px;
+    background-color :#F3F3F3;
+    width: 100vw;
+    height:40px;
 }
 
 .navbar ul {
     list-style-type: none;
     display: flex;
+    justify-content: center;
 }
-
+.nav-center {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+.nav-center li {
+    margin: 0 10px;
+}
 .navbar ul li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 .navbar ul li a {
@@ -39,8 +146,28 @@ body {
     color: #333;
     font-weight: bold;
 }
+.nav-icon-left, .nav-icon-right {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.nav-icon-right a {
+    text-decoration: none;
+     /* Removes the underline from the link */
+   
+}
+.nav-icon-right  {
+    text-decoration: none;
+     /* Removes the underline from the link */
+   
+}
 
-.search input[type="text"] {
+/* Sticky header effect for notification bar */
+.notification-bar.sticky {
+    display: none;
+}
+
+/* .search input[type="text"] {
     padding: 5px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -53,7 +180,7 @@ body {
     color: #fff;
     border-radius: 5px;
     margin-left: 5px;
-}
+} */
 
 /* Hero Section */
 .hero-section {
@@ -180,35 +307,36 @@ body {
     font-size: 2rem;
     margin-bottom: 20px;
 }
+/* ////-------------------------------------------------------------- */
+/* Container adjustments */
+.circular-collection-container {
+    padding: 20px;
+    text-align: center;
+}
 
+.circular-collection-heading-3 h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Centered grid layout */
 .circular-collection-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; /* Center items horizontally */
     gap: 20px;
 }
 
+/* Ensuring circular items */
 .circular-collection-item {
-    flex: 1 1 calc(25% - 40px); /* 4 items per row, adjust as necessary */
-    max-width: calc(25% - 40px);
     text-align: center;
+    cursor: pointer;
 }
-.circular-img-container {
-    width: 100%; /* Make the image container fill the square */
-    height: 100%; /* Ensure it fills the height */
-    border-radius: 50%; /* Make the image circular */
-    overflow: hidden; /* Hide overflow content */
-    display: flex;
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-}
-
 
 .circular-collection-circle {
     width: 150px;
     height: 150px;
-    margin: 0 auto;
-    border-radius: 50%;
+    border-radius: 50%; /* Makes the div circular */
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -219,7 +347,7 @@ body {
 .circular-collection-circle img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Ensures the image fills the circle */
 }
 
 .circular-collection-title h1 {
@@ -227,6 +355,56 @@ body {
     margin-top: 10px;
     color: #333;
 }
+
+/* ////---------------- */
+/* .circular-collection-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.circular-collection-item {
+    flex: 1 1 calc(25% - 40px); /* 4 items per row, adjust as necessary */
+    /* max-width: calc(25% - 40px);
+    text-align: center; */
+/* } */
+.circular-img-container {
+    width: 100%; /* Make the image container fill the square */
+    height: 100%; /* Ensure it fills the height */
+    border-radius: 50%; /* Make the image circular */
+    overflow: hidden; /* Hide overflow content */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+
+}
+
+
+.circular-collection-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the div circular */
+    overflow: hidden; /* Ensures the image stays within the circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5; /* Optional background color */
+}
+
+.circular-collection-circle img {
+    width: 100%; /* Makes the image cover the circle */
+    height: 100%; /* Ensures the image fills the container */
+    object-fit: cover; /* Keeps the aspect ratio of the image */
+    border-radius: 50%; /* Ensures the image itself is circular */
+}
+
+
+.circular-collection-title h1 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #333;
+} */
 .circular-img {
     width: 80%; /* Control image size */
     height: auto; /* Maintain aspect ratio */

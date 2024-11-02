@@ -4,37 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Limelight Online Clothing Store! Women, Men Accessories
-        – Limelightpk</title>
+    <title> Limelight Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon"
         href="//www.limelight.pk/cdn/shop/t/224/assets/apple-touch-icon-57x57.png?v=60571135740766055601728378381"
         type="image/png">
+        <style>
+          .whatsapp-icon-main {
+              margin-left: 20px ;/* Adjust as needed */
+              margin-right: 0;
+              position: relative; /* Allows the use of top property */
+              top: 9px; /* Adjust as needed to slide lower */
+          }
+          </style>
 
 </head>
 
 <body>
-    <header class="header">
+  <header class="header">
+    <div class="notification-bar">Free delivery for orders above Rs 4999 within Pakistan</div>
+    
+    <div class="top-bar">
+        <div class="contact-icons">
+          <div class="whatsapp-icon-main">
+            <a  id="cstm-whatsapp-link" href="https://wa.me/923151110333?text" target="_blank" previewlistener="true">
+              <img loading="lazy" src="https://cdn.shopify.com/s/files/1/2635/3244/files/40_x_40_Whatsapp_PNG.png?v=1642676551" alt="Lime Light Whatapps" width="31" height="28">
+            </a>
+            </div>
+            <div class="phoneicon">
+              <a href="#" style="color: white; text-decoration: none;">
+                  <i class="ri-phone-line" style="margin-left: 5px ; font-size: 30px;"></i>
+              </a>
+          </div>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Search...">
+          <button class="search__button field__button" aria-label="Search">
+            <i class="ri-search-line"></i>
+              </button>
+      </div>
         <div class="logo">
             <img src="http://www.limelight.pk/cdn/shop/files/200_X_28_Logo_Limelight_EPS-01_8d3e53a7-d081-4edd-b638-e0e825e8a271.png?v=1675675711"
                 alt="Limelight Logo">
         </div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#">WOMEN</a></li>
-                <li><a href="#">GIRLS</a></li>
-                <li><a href="#">MEN</a></li>
-                <li><a href="#">ACCESSORIES</a></li>
-                <li><a href="#">SALE</a></li>
+       
+        <div class="cart-section">
+            <a href="#"><i class="fas fa-truck"></i></a>
+            <span class="currency">PKR ▼</span>
+            <a href="#"><i class="fas fa-shopping-cart"></i><span class="cart-count">1</span></a>
+            <a href="#"><i class="fas fa-user"></i></a>
+        </div>
+    </div>
 
-                <li><a href="#">CHECKOUT</a></li>
-            </ul>
-        </nav>
+    <nav class="navbar">
+      <div class="nav-icon-left">  <a href="#"><img src="user.png" alt="User Icon" width="30" height="30"></a></div>
+        <ul>
+          <div class="nav-center">
+            <li><a href="#">WOMEN</a></li>
+            <li><a href="#">GIRLS</a></li>
+            <li><a href="#">MEN</a></li>
+            <li><a href="#">ACCESSORIES</a></li>
+            <li><a style="color: red;" href="#">SALE</a></li>
+         
+        </ul>
+      </div>
+          <div class="nav-icon-right">
+            <a href="#">
+                <span style="margin-right: 1px; color: black; height: 5px; width: 5px;">CHECKOUT</span>
+                <img src="sign-out.png" alt="Checkout Icon" height="28" width="28" style="vertical-align: middle;">
+            </a>
+        </div>
+           
+        
+    </nav>
+</header>
+
         <!-- <div class="search">
             <input type="text" placeholder="Search...">
             <button>Search</button>
         </div> -->
-    </header>
+  
 
     <!-- <section class="hero-section">
         <div class="hero-content">
@@ -116,6 +167,7 @@
             <!-- Circular Item 6 -->
             <div class="circular-collection-item">
               <a class="circular-collection-media" href="#">
+                
                 <div class="circular-collection-circle">
                   <img src="https://www.limelight.pk/cdn/shop/files/eastern_tops_8ec740e5-d124-4d3b-9d97-3d300b20a667_300x.png?v=1722245388" loading="lazy" alt="limelight-example">
                 </div>
