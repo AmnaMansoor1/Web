@@ -5,29 +5,63 @@
     padding: 0;
     box-sizing: border-box;
 }
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
 body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden;
 }
+.header {
+    /* position: fixed; */
+    width: 100%;
+    overflow-x: hidden;
+    position: sticky;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 100;
+    top: 0;
 
+}
 /* Notification bar */
 .notification-bar {
+    position: relative;
     background-color: rgb(255, 255, 255);
     color: rgb(244, 14, 14);
     text-align: center;
     padding: 5px;
     font-size: 12px;
+   
+}
+.scrolled .notification-bar{
+    top: -30px;
+
 }
 
-.header {
+
+.top-bar, .navbar {
+  
+    max-width: 100%;
     width: 100%;
-}
+    box-sizing: border-box;
+    overflow: hidden;
+    z-index: 99;
+   
+    }
+
 
 /* Top Bar */
 .top-bar {
+    
     height: 50px;
+    width: 100vw;
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
@@ -51,7 +85,7 @@ body {
 .logo img {
     margin: auto;
     height: 5vh;
-    width: 20vw;
+    width: 100%;
 }
 /* Center Logo */
 .logo {
@@ -120,14 +154,17 @@ body {
     background-color: #f8f8f8;
     padding: 10px 20px;
     background-color :#F3F3F3;
-    width: 100vw;
+    width: 100%;
     height:40px;
+    margin: 0;
+
 }
 
 .navbar ul {
     list-style-type: none;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .nav-center {
     display: flex;
@@ -161,7 +198,9 @@ body {
      /* Removes the underline from the link */
    
 }
-
+.nav-icon-left {
+    margin-top: -10px; /* Adjust the value as needed */
+} 
 /* Sticky header effect for notification bar */
 .notification-bar.sticky {
     display: none;
@@ -183,6 +222,19 @@ body {
 } */
 
 /* Hero Section */
+#carouselExampleIndicators {
+    margin-top: 20px;
+    margin-bottom: 20px; /* Adjust as needed */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px; /* Set to your preferred width */
+}
+.circular-collection-wrapper-line {
+    height: 4px;
+    background-color: #e7dfd6;
+    margin: 0 auto;
+    margin-top: 20px;
+}
 .hero-section {
     background-image: url('hero-image.jpg');
     background-size: cover;
@@ -244,40 +296,7 @@ body {
     background-color: #ddd;
 }
 
-/* Footer Styles */
-.footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
 
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.footer-section {
-    margin: 10px;
-}
-
-.footer-section h3 {
-    margin-bottom: 10px;
-}
-
-.footer-section ul {
-    list-style-type: none;
-}
-
-.footer-section ul li {
-    margin-bottom: 10px;
-}
-
-.footer-section ul li a {
-    text-decoration: none;
-    color: #fff;
-}
 
 .social-icons {
     display: flex;
@@ -435,50 +454,81 @@ body {
     width: 100px; /* Set a specific width for the images */
     height: auto; /* Maintain aspect ratio */
 }
- /* footer */
- .footer h3{
-    color:black;
-    font-weight: bold;
- }.footer {
-    background-color: white; /* White background */
-    padding: 20px; /* Padding for spacing */
-    text-align: left; /* Align text to the left */
+* Footer Styles */
+.footer {
+    background-color: #ffffff;
+    color: #020000;
+    padding: 20px;
+    text-align: center;
 }
 
 .footer-content {
-    display: flex; /* Flex layout for the footer sections */
-    justify-content: space-between; /* Space between sections */
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Space between Customer Care and Information sections */
+    flex-wrap: wrap;
+    padding-bottom: 20px;
 }
 
 .footer-section {
-    flex: 1; /* Equal space for each section */
-    margin-right: 20px; /* Margin for spacing between sections */
-}
-
-.footer-section:last-child {
-    margin-right: 0; /* No margin on the last section */
+    flex: 1;
+    max-width: 200px;
+    text-align: left;
 }
 
 .footer-section h3 {
-    margin-bottom: 10px; /* Space below the heading */
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
 .footer-section ul {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0; /* Remove default padding */
+    list-style-type: none;
+    padding: 0;
 }
 
 .footer-section ul li {
-    margin-bottom: 5px; /* Space between list items */
+    margin-bottom: 10px;
 }
 
 .footer-section ul li a {
-    text-decoration: none; /* Remove underline from links */
-    color: black; /* Text color */
+    text-decoration: none;
+    color: #050505;
 }
 
-.footer-section ul li a:hover {
-    text-decoration: underline; /* Underline on hover */
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 0;
+}
+
+.footer-social a img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-payment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.footer-payment p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-payment img {
+    width: 40px;
+    margin: 0 5px;
+}
+
+.footer-bottom {
+    font-size: 12px;
+    color: #888;
+    padding-top: 15px;
 }
 
 /* Social icons section */
