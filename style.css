@@ -17,6 +17,7 @@ body {
     color: #333;
     line-height: 1.6;
     overflow-x: hidden;
+    box-sizing: border-box;
 }
 .header {
     /* position: fixed; */
@@ -220,6 +221,25 @@ body {
     border-radius: 5px;
     margin-left: 5px;
 } */
+  /* Search icon styling */
+  .search-bar i {
+    font-size: 16px; /* Adjust icon size */
+    margin-right: 5px; /* Space between icon and input field */
+    position: relative;
+    top: -2px; /* Adjust upward position */
+  }
+  .cart-section .ri-truck-line {
+    font-size: 40px; /* Adjust to desired size */
+    color: #ffffff;     /* Optional: Change color */
+    
+}
+.cart-section a {
+    text-decoration: none; /* Removes the underline */
+}
+  .cart-section .ri-shopping-cart-2-line{
+    font-size: 30px; /* Adjust to desired size */
+    color: #ffffff;     /* Optional: Change color */
+  }
 
 /* Hero Section */
 #carouselExampleIndicators {
@@ -230,11 +250,96 @@ body {
     max-width: 1200px; /* Set to your preferred width */
 }
 .circular-collection-wrapper-line {
+    display: block;
+    width: 100%;
     height: 4px;
     background-color: #e7dfd6;
-    margin: 0 auto;
-    margin-top: 20px;
+    margin: 20px auto;
+  }
+.circular-collection-media {
+    text-decoration: none; /* Removes underline from links */
 }
+ /* circular divs */
+ .circular-collection-wrapper {
+    padding: 2rem 0;
+    padding-bottom: 0 !important;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+ .circular-collection-container {
+    margin: 0 auto;
+    width: 94%;
+}
+.circular-collection-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;  /* Ensures the container takes full width */
+    margin: 0 auto; /* Centers the container */
+    gap:unset;
+}
+
+.circular-collection-item {
+    flex: 0 0 21%; /* 4 items per row (25% width for each) */
+    margin-bottom: 1rem; /* Remove any margin between items */
+    padding-left: 2rem;
+    padding-right: 2rem;
+    flex-flow: column;
+    padding: 0; /* Remove any padding to avoid unwanted space */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    display: flex;
+    flex-direction: column;
+    align-items:stretch; /* Centers content horizontally */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+
+}
+
+.circular-collection-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto; /* Centers the circle inside the container */
+}
+
+
+.circular-collection-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.circular-collection-title h1 {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Make the layout responsive */
+@media (max-width: 1200px) {
+    .circular-collection-item {
+        width: 33.33%; /* 3 items per row on medium screens */
+    }
+}
+
+@media (max-width: 800px) {
+    .circular-collection-item {
+        width: 50%; /* 2 items per row on smaller screens */
+    }
+}
+
+@media (max-width: 500px) {
+    .circular-collection-item {
+        width: 100%; /* 1 item per row on very small screens */
+    }
+}
+
+.circular-collection-item:hover .circular-collection-circle {
+    border-color: #000; /* Change border color on hover */
+}
+
 .hero-section {
     background-image: url('hero-image.jpg');
     background-size: cover;
@@ -272,29 +377,57 @@ body {
     text-align: center;
 }
 
-.categories h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
 .category-grid {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: center; /* Center the items */
+    align-items: center; /* Align items vertically */
+    gap: 20px; /* Space between categories */
+    width: 98%;
+
 }
 
 .category-item {
-    background-color: #f0f0f0;
-    padding: 40px;
-    margin: 10px;
-    flex: 1 1 200px;
     text-align: center;
     cursor: pointer;
+    justify-content: center;
+    display: flex;
+    gap: 0px;
+    width: 300px;
+    height: 212px;
+
 }
 
-.category-item:hover {
-    background-color: #ddd;
+.category-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
+
+.category-item img {
+    height: 212px;
+    max-width: 100%;
+    border-radius: 7%; /* Rounded corners for images  */
+    display: flex;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+
+
+}
+ /* making categories responsive  */
+ @media screen and (max-width: 767px){
+    .category-item img{
+        display: flex;
+        border-radius:7%;
+        max-width: 100%;
+        min-width: 71%;
+        justify-content: center;
+ }
+ }
+
+
 
 
 
@@ -454,11 +587,151 @@ body {
     width: 100px; /* Set a specific width for the images */
     height: auto; /* Maintain aspect ratio */
 }
-* Footer Styles */
-.footer {
-    background-color: #ffffff;
-    color: #020000;
+
+ /* Accessories css  */
+ .accessories-slider {
+    text-align: center;
     padding: 20px;
+}
+
+.accessories-slider h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.accessories-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+    scrollbar-width: thin; /* For Firefox */
+}
+
+.accessory-item {
+    flex: 0 0 auto; /* Ensure items don’t shrink */
+    text-align: center;
+    width: 120px;
+}
+
+.accessory-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.accessory-item p {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Optional: Hide scrollbar */
+.accessories-container::-webkit-scrollbar {
+    display: none; /* For Chrome, Edge, and Safari */
+}
+
+/* //-------------- */
+ /* new swiper */
+ .swiper{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style-type: none;
+    padding: 0;
+    z-index: 1;
+    display: block;
+ }
+ .swiper-container {
+    width: 100%;
+    max-width: 1200px; /* Restrict the container's width */
+    margin: 0 auto; /* Center the container */
+    position: relative;
+}
+
+.swiper-wrapper {
+    display: flex;
+    transition-duration: 0.3s;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    border-radius: 10px; /* Rounded corners like the example */
+    display: block;
+    object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: #000;
+}
+
+
+ /* //---------------// */
+/* * Footer Styles */ 
+#footer-id{
+    background-color: #fffafa;
+    width: 100vw;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+}
+.footer {
+    width:100%;
+    /* margin: 0 auto; */
+    left: 0;
+    right: 0;
+    background-color: #FAFAFA;
+    color: #020000;
+    padding: 0;
+    margin-left: 0%;
+    margin-right: 0%;
     text-align: center;
 }
 
@@ -532,23 +805,32 @@ body {
 }
 
 /* Social icons section */
-.social-section {
-    margin-top: 10px; /* Add margin at the top for spacing */
-    display: flex; /* Use flex for alignment */
-    justify-content: flex-start; /* Align icons to the start */
+.list-social {
+    display: flex; /* Enables horizontal alignment */
+    gap: 10px; /* Adjust spacing between items */
+    padding: 0;
+    margin: 0;
+    list-style: none; 
+    /* Removes default list styling */
+    justify-content: center;
+    align-items: center;
 }
 
-.social-icons {
-    display: flex; /* Flex layout for social icons */
-    margin-top: 10px; /* Space above social icons */
+.list-social__item {
+    display: flex; /* Ensures proper alignment of the links */
 }
 
-.social-icons a {
-    margin-right: 10px; /* Space between icons */
+.list-social__link img {
+    display: block;
+    width: 30px; /* Consistent icon size */
+    height: 30px;
 }
+ /* payment methods */
+ .footer-payment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+ }
 
-.social-icons a img {
-    width: 24px; /* Set a specific size for social icons */
-    height: auto; /* Maintain aspect ratio */
-}
 

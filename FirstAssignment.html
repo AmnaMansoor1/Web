@@ -2,293 +2,489 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Limelight Clone</title>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Limelight Clone</title>
+  <!-- remix icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon"
-        href="//www.limelight.pk/cdn/shop/t/224/assets/apple-touch-icon-57x57.png?v=60571135740766055601728378381"
-        type="image/png">
-        <style>
-          .whatsapp-icon-main {
-              margin-left: 20px ;/* Adjust as needed */
-              margin-right: 0;
-              position: relative; /* Allows the use of top property */
-              top: 9px; /* Adjust as needed to slide lower */
-          }
-          </style>
-          <!-- Bootstrap cdn -->
-          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+   <script src="script.js"></script>
+  <link rel="shortcut icon"
+    href="//www.limelight.pk/cdn/shop/t/224/assets/apple-touch-icon-57x57.png?v=60571135740766055601728378381"
+    type="image/png">
+  <style>
+    .whatsapp-icon-main {
+      margin-left: 20px;
+      /* Adjust as needed */
+      margin-right: 0;
+      position: relative;
+      /* Allows the use of top property */
+      top: 9px;
+      /* Adjust as needed to slide lower */
+    }
+  </style>
+  <!-- Bootstrap cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- for accessories  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- for swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+ 
 
 </head>
 
 <body>
   <header class="header">
     <div class="notification-bar">Free delivery for orders above Rs 4999 within Pakistan</div>
-    
+
     <div class="top-bar">
-        <div class="contact-icons">
-          <div class="whatsapp-icon-main">
-            <a  id="cstm-whatsapp-link" href="https://wa.me/923151110333?text" target="_blank" previewlistener="true">
-              <img loading="lazy" src="https://cdn.shopify.com/s/files/1/2635/3244/files/40_x_40_Whatsapp_PNG.png?v=1642676551" alt="Lime Light Whatapps" width="31" height="28">
-            </a>
-            </div>
-            <div class="phoneicon">
-              <a href="#" style="color: white; text-decoration: none;">
-                  <i class="ri-phone-line" style="margin-left: 5px ; font-size: 30px;"></i>
-              </a>
-          </div>
+      <div class="contact-icons">
+        <div class="whatsapp-icon-main">
+          <a id="cstm-whatsapp-link" href="https://wa.me/923151110333?text" target="_blank" previewlistener="true">
+            <img loading="lazy"
+              src="https://cdn.shopify.com/s/files/1/2635/3244/files/40_x_40_Whatsapp_PNG.png?v=1642676551"
+              alt="Lime Light Whatapps" width="31" height="28">
+          </a>
         </div>
-        <div class="search-bar">
-          <input type="text" placeholder="Search...">
-          <button class="search__button field__button" aria-label="Search">
-            <i class="ri-search-line"></i>
-              </button>
+        <div class="phoneicon">
+          <a href="#" style="color: white; text-decoration: none;">
+            <i class="ri-phone-line" style="margin-left: 5px ; font-size: 30px;"></i>
+          </a>
+        </div>
       </div>
-        <div class="logo">
-            <img src="http://www.limelight.pk/cdn/shop/files/200_X_28_Logo_Limelight_EPS-01_8d3e53a7-d081-4edd-b638-e0e825e8a271.png?v=1675675711"
-                alt="Limelight Logo">
-        </div>
-       
-        <div class="cart-section">
-            <a href="#"><i class="fas fa-truck"></i></a>
-            <span class="currency">PKR ▼</span>
-            <a href="#"><i class="fas fa-shopping-cart"></i><span class="cart-count">1</span></a>
-            <a href="#"><i class="fas fa-user"></i></a>
-        </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button class="search__button field__button" aria-label="Search">
+          <i class="ri-search-line"></i>
+        </button>
+      </div>
+      <div class="logo">
+        <img
+          src="http://www.limelight.pk/cdn/shop/files/200_X_28_Logo_Limelight_EPS-01_8d3e53a7-d081-4edd-b638-e0e825e8a271.png?v=1675675711"
+          alt="Limelight Logo">
+      </div>
+
+      <div class="cart-section">
+        <a href="#">
+          <i class="ri-truck-line"></i></a>
+        <span class="currency">PKR ▼</span>
+        <a href="#"><i class="ri-shopping-cart-2-line"></i></a>
+        <a href="#"><i class="fas fa-user"></i></a>
+      </div>
     </div>
 
     <nav class="navbar">
-      <div class="nav-icon-left">  <a href="#"><img src="user.png" alt="User Icon" width="30" height="30"></a></div>
-        <ul>
-          <div class="nav-center">
-            <li style="font-family:Ubuntu ; font-weight: 20;"><a href="#">WOMEN</a></li>
-            <li style="font-family: Ubuntu; font-weight: 20;"><a href="#">GIRLS</a></li>
-            <li style="font-family: Ubuntu; font-weight: 20;"><a href="#">MEN</a></li>
-            <li style="font-family: Ubuntu; font-weight: 20;"><a href="#">ACCESSORIES</a></li>
-            <li style="font-family:  Ubuntu; font: weight 20;"><a style="color: red;" href="#">SALE</a></li>
-         
-        </ul>
-      </div>
-          <div class="nav-icon-right">
-            <a href="#">
-                <span style="margin-right: 1px; color: black; height: 5px; width: 5px;">CHECKOUT</span>
-                <img src="sign-out.png" alt="Checkout Icon" height="28" width="28" style="vertical-align: middle;">
-            </a>
-        </div>
-           
-        
-    </nav>
-</header>
+      <div class="nav-icon-left"> <a href="#"><img src="user.png" alt="User Icon" width="30" height="30"></a></div>
+      <ul>
+        <div class="nav-center">
+          <li style="font-family:Ubuntu ; font-weight: 20;"><a href="#">WOMEN</a></li>
+          <li style="font-family: Ubuntu; font-weight: 20;"><a href="#">GIRLS</a></li>
+          <li style="font-family: Ubuntu; font-weight: 20;"><a href="#">MEN</a></li>
+          <li style="font-family: Ubuntu; font-weight: 20;"><a href="#">ACCESSORIES</a></li>
+          <li style="font-family:  Ubuntu; font: weight 20;"><a style="color: red;" href="#">SALE</a></li>
 
-        <!-- <div class="search">
+      </ul>
+      </div>
+      <div class="nav-icon-right">
+        <a href="#">
+          <span style="margin-right: 1px; color: black; height: 5px; width: 5px;">CHECKOUT</span>
+          <img src="sign-out.png" alt="Checkout Icon" height="28" width="28"
+            style="vertical-align: middle; position: relative; top: -5px;">
+        </a>
+      </div>
+
+
+    </nav>
+  </header>
+
+  <!-- <div class="search">
             <input type="text" placeholder="Search...">
             <button>Search</button>
         </div> -->
-  
 
-    <!-- <section class="hero-section">
+
+  <!-- <section class="hero-section">
         <div class="hero-content">
             <h1>Discover the Latest Fashion Trends</h1>
             <p>Shop the new arrivals in women's, men's, and kids' fashion.</p>
             <button class="shop-now-btn">Shop Now</button>
         </div>
     </section> -->
-     <!-- Carousel space left -->
-     <div id="carouselExampleIndicators" class="carousel slide">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="https://www.limelight.pk/cdn/shop/files/Cambric-Unstitched.jpg?v=1728534904" class="d-block w-100" alt="Error Loading">
-        </div>
-        <div class="carousel-item">
-          <img src="https://www.limelight.pk/cdn/shop/files/web-pc_28af323e-778e-4d36-9f5f-5801a384756e.jpg?v=1729771565" class="d-block w-100" alt="Error Loading">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+  <!-- Carousel space left -->
+  <div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
     </div>
-     <!-- Wrapper line -->
-     <div class="circular-collection-wrapper-line"></div>
-    
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://www.limelight.pk/cdn/shop/files/Web-pc_SWIPE.jpg?v=1733119536" class="d-block w-100"
+          alt="Error Loading">
+      </div>
+      <div class="carousel-item">
+        <img src="https://www.limelight.pk/cdn/shop/files/Cambric-Unstitched.jpg?v=1733209577" class="d-block w-100"
+          alt="Error Loading">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- Wrapper line -->
+  <div class="circular-collection-wrapper-line"></div>
 
-    <!-- Circular divs -->
-    <div class="circular-collection-container">
-        <div class="circular-collection-wrapper">
-          <div class="circular-collection-heading-3">
-            <h1 class="text-center">Unstitched</h1>
+
+  <!-- Circular divs -->
+  <div class="circular-collection-container">
+    <div class="circular-collection-wrapper">
+      <div class="circular-collection-heading-3">
+        <h1 class="text-center">Unstitched</h1>
+      </div>
+
+      <div class="circular-collection-grid">
+        <!-- Circular Item 1 -->
+        <div class="circular-collection-item">
+          <a class="circular-collection-media" href="https://www.limelight.pk/collections/printed-unstitched">
+            <div class="circular-collection-circle">
+              <img src="//www.limelight.pk/cdn/shop/files/UNSTITCHED_printed_300x.png?v=1722245940" loading="lazy"
+                alt="limelight-printed">
+            </div>
+            <div class="circular-collection-title">
+              <h1 class="text-center">PRINTED</h1>
+            </div>
+          </a>
+        </div>
+
+        <!-- Circular Item 2 -->
+        <div class="circular-collection-item">
+          <a class="circular-collection-media" href="https://www.limelight.pk/collections/embroidered-unstitched">
+            <div class="circular-collection-circle">
+              <img src="//www.limelight.pk/cdn/shop/files/UNSTITCHED_embroided_300x.png?v=1722245940" loading="lazy"
+                alt="limelight-embroidered">
+            </div>
+            <div class="circular-collection-title">
+              <h1 class="text-center">EMBROIDERED</h1>
+            </div>
+          </a>
+        </div>
+
+        <!-- Circular Item 3 -->
+        <div class="circular-collection-item">
+          <a class="circular-collection-media" href="https://www.limelight.pk/collections/unstitched-winter">
+            <div class="circular-collection-circle">
+              <img
+                src="//www.limelight.pk/cdn/shop/files/Unstitched_300x300_17c8fa10-87ff-4ef7-b344-de5ab26aa340_300x.png?v=1728026205"
+                loading="lazy" alt="limelight-winter">
+            </div>
+            <div class="circular-collection-title">
+              <h1 class="text-center">WINTER</h1>
+            </div>
+          </a>
+        </div>
+        <!-- Circular Item 3 -->
+        <div class="circular-collection-item">
+          <a class="circular-collection-media" href="https://www.limelight.pk/collections/unstitched-winter">
+            <div class="circular-collection-circle">
+              <img src="https://www.limelight.pk/cdn/shop/files/velvet_main_page_300x.png?v=1733305123" loading="lazy"
+                alt="limelight-winter">
+            </div>
+            <div class="circular-collection-title">
+              <h1 class="text-center">VELVET</h1>
+            </div>
+          </a>
+        </div>
+
+
+
+      </div>
+      <!-- Wrapper line -->
+      <div class="circular-collection-wrapper-line"></div>
+      <!-- Women Wear Section (New Circular Divs) -->
+      <div class="circular-collection-wrapper">
+        <div class="circular-collection-heading-3">
+          <h1 class="text-center">Women Wear</h1>
+        </div>
+
+        <div class="circular-collection-grid">
+          <!-- Circular Item 5 -->
+          <div class="circular-collection-item">
+            <a class="circular-collection-media" href="#">
+              <div class="circular-collection-circle">
+                <img
+                  src="https://www.limelight.pk/cdn/shop/files/dailywear_5e709826-db47-41b8-b0e4-0bc3a84a343f_300x.png?v=1730436742"
+                  alt="women-wear-1">
+              </div>
+              <div class="circular-collection-title">
+                <h1 class="text-center">DAILY WEAR</h1>
+              </div>
+            </a>
           </div>
-      
-          <div class="circular-collection-grid">
-            <!-- Circular Item 1 -->
-            <div class="circular-collection-item">
-              <a class="circular-collection-media" href="https://www.limelight.pk/collections/printed-unstitched">
-                <div class="circular-collection-circle">
-                  <img src="//www.limelight.pk/cdn/shop/files/UNSTITCHED_printed_300x.png?v=1722245940" loading="lazy" alt="limelight-printed">
-                </div>
-                <div class="circular-collection-title">
-                  <h1 class="text-center">PRINTED</h1>
-                </div>
-              </a>
-            </div>
-      
-            <!-- Circular Item 2 -->
-            <div class="circular-collection-item">
-              <a class="circular-collection-media" href="https://www.limelight.pk/collections/embroidered-unstitched">
-                <div class="circular-collection-circle">
-                  <img src="//www.limelight.pk/cdn/shop/files/UNSTITCHED_embroided_300x.png?v=1722245940" loading="lazy" alt="limelight-embroidered">
-                </div>
-                <div class="circular-collection-title">
-                  <h1 class="text-center">EMBROIDERED</h1>
-                </div>
-              </a>
-            </div>
-      
-            <!-- Circular Item 3 -->
-            <div class="circular-collection-item">
-              <a class="circular-collection-media" href="https://www.limelight.pk/collections/unstitched-winter">
-                <div class="circular-collection-circle">
-                  <img src="//www.limelight.pk/cdn/shop/files/Unstitched_300x300_17c8fa10-87ff-4ef7-b344-de5ab26aa340_300x.png?v=1728026205" loading="lazy" alt="limelight-winter">
-                </div>
-                <div class="circular-collection-title">
-                  <h1 class="text-center">WINTER</h1>
-                </div>
-              </a>
-            </div>
-      
-            <!-- Circular Item 4 -->
-            <div class="circular-collection-item">
-              <a class="circular-collection-media" href="https://www.limelight.pk/collections/unstitched-trousers">
-                <div class="circular-collection-circle">
-                  <img src="//www.limelight.pk/cdn/shop/files/unstitched_bottoms_df455c13-3e77-46fa-94b2-dfffcd7caf43_300x.png?v=1722246035" loading="lazy" alt="limelight-bottoms">
-                </div>
-                <div class="circular-collection-title">
-                  <h1 class="text-center">BOTTOMS</h1>
-                </div>
-              </a>
-            </div>
-      
-            <!-- Add 4 more items for a total of 8 -->
-            <!-- Circular Item 5 -->
-            <div class="circular-collection-item">
-              <a class="circular-collection-media" href="#">
-                <div class="circular-collection-circle">
-                  <img src="https://www.limelight.pk/cdn/shop/files/coords_300x.png?v=1722245324" loading="lazy" alt="limelight-example">
-                </div>
-                <div class="circular-collection-title">
-                  <h1 class="text-center">CO-ORDS</h1>
-                </div>
-              </a>
-            </div>
-      
-            <!-- Circular Item 6 -->
-            <div class="circular-collection-item">
-              <a class="circular-collection-media" href="#">
-                
-                <div class="circular-collection-circle">
-                  <img src="https://www.limelight.pk/cdn/shop/files/eastern_tops_8ec740e5-d124-4d3b-9d97-3d300b20a667_300x.png?v=1722245388" loading="lazy" alt="limelight-example">
-                </div>
-                <div class="circular-collection-title">
-                  <h1 class="text-center">Eastern Tops</h1>
-                </div>
-              </a>
-            </div>
-      
-            <!-- Circular Item 7 -->
-            <div class="circular-collection-item">
-              <a class="circular-collection-media" href="#">
-                <div class="circular-collection-circle">
-                  <img src="https://www.limelight.pk/cdn/shop/files/western_2ab2c854-d117-4363-b08d-f7690594342e_300x.png?v=1722245440" loading="lazy" alt="limelight-example">
-                </div>
-                <div class="circular-collection-title">
-                  <h1 class="text-center">Western</h1>
-                </div>
-              </a>
-            </div>
-      
-            <!-- Circular Item 8 -->
-            <div class="circular-collection-item">
-              <a class="circular-collection-media" href="#">
-                <div class="circular-collection-circle">
-                  <img src="https://www.limelight.pk/cdn/shop/files/Winter_main_home_page_300x.jpg?v=1729148341" loading="lazy" alt="limelight-example">
-                </div>
-                <div class="circular-collection-title">
-                  <h1 class="text-center">Winter</h1>
-                </div>
-              </a>
-            </div>
+          <!-- Circular Item 6 -->
+          <div class="circular-collection-item">
+            <a class="circular-collection-media" href="#">
+              <div class="circular-collection-circle">
+                <img src="https://www.limelight.pk/cdn/shop/files/glam_300x.png?v=1730436786" alt="women-wear-2">
+              </div>
+              <div class="circular-collection-title">
+                <h1 class="text-center">GLAM</h1>
+              </div>
+            </a>
+          </div>
+          <!-- Circular Item 7 -->
+          <div class="circular-collection-item">
+            <a class="circular-collection-media" href="#">
+              <div class="circular-collection-circle">
+                <img src="https://www.limelight.pk/cdn/shop/files/signature_300x.png?v=1730436826" alt="women-wear-3">
+              </div>
+              <div class="circular-collection-title">
+                <h1 class="text-center">SIGNATURE</h1>
+              </div>
+            </a>
+          </div>
+          <!-- Circular Item 8 -->
+          <div class="circular-collection-item">
+            <a class="circular-collection-media" href="#">
+              <div class="circular-collection-circle">
+                <img src="https://www.limelight.pk/cdn/shop/files/formals_300x.png?v=1730440188" alt="women-wear-4">
+              </div>
+              <div class="circular-collection-title">
+                <h1 class="text-center">FORMAL</h1>
+              </div>
+            </a>
+          </div>
+          <!-- Circular Item 9 -->
+          <div class="circular-collection-item">
+            <a class="circular-collection-media" href="#">
+              <div class="circular-collection-circle">
+                <img src="https://www.limelight.pk/cdn/shop/files/coords_300x.png?v=1730436892" alt="women-wear-5">
+              </div>
+              <div class="circular-collection-title">
+                <h1 class="text-center">CO-ORDS</h1>
+              </div>
+            </a>
+          </div>
+          <!-- Circular Item 10 -->
+          <div class="circular-collection-item">
+            <a class="circular-collection-media" href="#">
+              <div class="circular-collection-circle">
+                <img
+                  src="https://www.limelight.pk/cdn/shop/files/eastern_tops_8ec740e5-d124-4d3b-9d97-3d300b20a667_300x.png?v=1730436925"
+                  alt="women-wear-6">
+              </div>
+              <div class="circular-collection-title">
+                <h1 class="text-center">EASTERN TOPS</h1>
+              </div>
+            </a>
+          </div>
+          <!-- Circular Item 11 -->
+          <div class="circular-collection-item">
+            <a class="circular-collection-media" href="#">
+              <div class="circular-collection-circle">
+                <img src="https://www.limelight.pk/cdn/shop/files/Winter_Vilvet_300x.png?v=1732038182"
+                  alt="women-wear-7">
+              </div>
+              <div class="circular-collection-title">
+                <h1 class="text-center">VELVET</h1>
+              </div>
+            </a>
+          </div>
+          <!-- Circular Item 12 -->
+          <div class="circular-collection-item">
+            <a class="circular-collection-media" href="#">
+              <div class="circular-collection-circle">
+                <img src="https://www.limelight.pk/cdn/shop/files/Winter_main_home_page_300x.jpg?v=1729925758"
+                  alt="women-wear-8">
+              </div>
+              <div class="circular-collection-title">
+                <h1 class="text-center">WINTER WESTERN</h1>
+              </div>
+            </a>
           </div>
         </div>
+        <div class="circular-collection-wrapper-line"></div>
       </div>
-      
-    <!-- //CAtegories -->
-    <section class="categories">
-        <h2>Categories</h2>
+
+
+
+      <!-- //CAtegories -->
+      <section class="categories">
         <div class="category-grid">
-            <div class="category-item">
-                <h3>MEN</h3>
-                <img src="https://www.limelight.pk/cdn/shop/files/Men_2.png?v=1717571456" alt="Error loading">
+          <div class="category-item">
+            <h3>MEN</h3>
+            <img src="https://www.limelight.pk/cdn/shop/files/Men_2.png?v=1717571456" alt="Men Category"
+              style="width: auto; height: auto;">
+          </div>
+          <div class="category-item">
+            <h3>GIRLS</h3>
+            <img src="https://www.limelight.pk/cdn/shop/files/Girls-Summer.png?v=1716882848" alt="Girls Category"
+              style="width: auto; height: auto;">
+          </div>
+        </div>
+      </section>
+      <div class="circular-collection-wrapper-line"></div>
+
+      <!-- Accessories section-->
+      <section class="accessories-slider">
+        <h2 style="font:xx-large,bolder;">Accessories</h2>
+        <div class="accessories-container">
+          <div class="accessory-item">
+            <img src="https://www.limelight.pk/cdn/shop/files/bags_2421991a-5e53-4b5c-8d70-6ce4e2ab32b7_300x.png?v=1722246070" alt="Bags">
+            <p>Bags</p>
+        </div>
+            <div class="accessory-item">
+                <img src="https://www.limelight.pk/cdn/shop/files/wallets_300x.png?v=1722246112" alt="Wallets">
+                <p>Wallets</p>
             </div>
-            <div class="category-item">
-                <h3>Girls</h3>
-                <img src="https://www.limelight.pk/cdn/shop/files/Girls-Summer.png?v=1716882848" alt="Error loading">
+            <div class="accessory-item">
+                <img src="https://www.limelight.pk/cdn/shop/files/mufflers_300x.png?v=1722246137" alt="Mufflers">
+                <p>Mufflers</p>
             </div>
+            <div class="accessory-item">
+                <img src="https://www.limelight.pk/cdn/shop/files/scarfs_300x.png?v=1724936141" alt="Scarves">
+                <p>Scarves</p>
+            </div>
+            <div class="accessory-item">
+                <img src="https://www.limelight.pk/cdn/shop/files/duppata_300x.png?v=1724327205" alt="Dupattas">
+                <p>Dupattas</p>
+            </div>
+            <div class="accessory-item">
+                <img src="https://www.limelight.pk/cdn/shop/files/footwear_76d40eb9-0b45-4e9a-8604-5efefa4b25e9_300x.png?v=1722246225" alt="Footwear">
+                <p>Footwear</p>
+            </div>
+            <div class="accessory-item">
+                <img src="https://www.limelight.pk/cdn/shop/files/jewelry_300x.png?v=1722246299" alt="Jewellery">
+                <p>Jewellery</p>
+            </div>
+            <div class="accessory-item">
+                <img src="https://www.limelight.pk/cdn/shop/files/watches_300x.png?v=1722246336" alt="Watches">
+                <p>Watches</p>
+            </div>
+            <div class="accessory-item">
+                <img src="https://www.limelight.pk/cdn/shop/files/glasses_300x.png?v=1727414651" alt="Sunglasses">
+                <p>Sunglasses</p>
+            </div>
+            <div class="accessory-item">
+              <img src="https://www.limelight.pk/cdn/shop/files/hair_300x.png?v=1722246403" alt="Hair">
+              <p>Hair</p>
+          </div>
+          <div class="accessory-item">
+            <img src="https://www.limelight.pk/cdn/shop/files/Compact_Mirror_300x.png?v=1722246446" alt="Compact Mirror">
+            <p>Compact Mirror</p>
+        </div>
+        <div class="accessory-item">
+          <img src="https://www.limelight.pk/cdn/shop/files/belt_300x.png?v=1722246479" alt="Belts">
+          <p>Belts</p>
+      </div>
+      <div class="accessory-item">
+        <img src="https://www.limelight.pk/cdn/shop/files/keychain_300x.png?v=1722246593" alt="Key chains">
+        <p>key chains</p>
+    </div>
         </div>
     </section>
-    
-
-    <div class="footer">
-      <div class="footer-content">
-          <div class="footer-section">
-              <h3>CUSTOMER CARE</h3>
-              <ul>
-                  <li><a href="#">Order Tracking</a></li>
-                  <li><a href="#">Shipping & Handling</a></li>
-                  <li><a href="#">Exchange Policy</a></li>
-                  <li><a href="#">Order Cancellation Policy</a></li>
-                  <li><a href="#">Privacy Policy</a></li>
-                  <li><a href="#">Terms of Use</a></li>
-                  <li><a href="#">FAQ’s</a></li>
-              </ul>
+     <!-- new carousel  -->
+  
+     <div class="swiper-container">
+      <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+              <a href="https://www.limelight.pk/collections/50-sale">
+                  <img class="desktop-only" src="//www.limelight.pk/cdn/shop/files/50_-banner_2_09a49b27-0785-4676-8ec5-fffc70e71704.jpg?v=1710240376" alt="Flat 50% Off Items">
+              </a>
           </div>
-          <div class="footer-section">
-              <h3>INFORMATION</h3>
-              <ul>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Contact Us</a></li>
-                  <li><a href="#">Careers</a></li>
-                  <li><a href="#">Store Locator</a></li>
-                  <li><a href="#">Limelight Trends</a></li>
-              </ul>
+  
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+              <a href="https://www.limelight.pk/collections/new-on-sale">
+                  <img class="desktop-only" src="//www.limelight.pk/cdn/shop/files/SALE-BANNER.png?v=1721887733" alt="Sale Banner">
+              </a>
           </div>
       </div>
-      <div class="footer-social">
-          <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-          <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
-          <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
-      </div>
-      <div class="footer-payment">
-          <p>We Accept</p>
-          <img src="visa-icon.png" alt="Visa">
-          <img src="mastercard-icon.png" alt="Mastercard">
-      </div>
-      <div class="footer-bottom">
-          <p>© 2024 Limelight. Powered by Alchemative</p>
-      </div>
+  
+      <!-- Navigation buttons -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+  
+      <!-- Pagination dots -->
+      <div class="swiper-pagination"></div>
   </div>
-  </footer>
+  <!-- Wrapper line -->
+  <div class="circular-collection-wrapper-line"></div>
+  
+
+
+
+      <div class="footer" id="footer-color">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>CUSTOMER CARE</h3>
+            <ul>
+              <li><a href="#">Order Tracking</a></li>
+              <li><a href="#">Shipping & Handling</a></li>
+              <li><a href="#">Exchange Policy</a></li>
+              <li><a href="#">Order Cancellation Policy</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">FAQ’s</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>INFORMATION</h3>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Store Locator</a></li>
+              <li><a href="#">Limelight Trends</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- footer socials -->
+       
+      <ul class="list-social">
+        <li class="list-social__item">
+            <a href="https://www.facebook.com/limelight.pret/" class="link list-social__link">
+                <img src="images/facebook-box-fill.svg" alt="Facebook" width="30" height="30">
+            </a>
+        </li>
+        <li class="list-social__item">
+            <a href="https://www.instagram.com/limelight.pret/" class="link list-social__link">
+                <img src="https://cdn.shopify.com/s/files/1/0015/2829/9567/files/insta.png?v=1633504162" alt="Instagram" width="30" height="30">
+            </a>
+        </li>
+        <li class="list-social__item">
+            <a href="https://www.youtube.com/limelight.pret/" class="link list-social__link">
+                <img src="images\youtube-fill.svg" alt="YouTube" width="30" height="30">
+            </a>
+        </li>
+    </ul>
     
+        <div class="footer-payment">
+          <div>
+          <p>We Accept</p>
+          <!-- visa-icon -->
+          <img src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/visa-1024.png" alt="visa card">
+        
+          <img src="images/mastercard.svg" alt="Mastercard">
+        </div>
+        <div class="footer-bottom">
+          <p>© 2024 Limelight. Powered by Alchemative</p>
+        </div>
+      </div>
+      </footer>
+
 </body>
 
 </html>
