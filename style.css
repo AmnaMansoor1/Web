@@ -711,6 +711,30 @@ body {
     opacity: 1;
     background-color: #000;
 }
+/* ----------------------------cards--------------------------- */
+
+    
+    .card-img-top {
+      height: 250px;
+      object-fit: cover; /* Keeps images uniform */
+    }
+    .card-title {
+      font-size: 1.1rem; /* Adjust font size */
+    }
+    .card-text {
+      font-size: 1rem; /* Keep price readable */
+      color: #333; /* Ensure good contrast */
+    }
+    #show-more {
+      background-color: #007bff; /* Bootstrap primary color */
+      border: none;
+      border-radius: 5px;
+    }
+    #show-more:hover {
+      background-color: #0056b3; /* Darker blue for hover effect */
+    }
+  
+  
 
 
  /* //---------------// */
