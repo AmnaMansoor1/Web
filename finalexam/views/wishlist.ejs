@@ -1,0 +1,8 @@
+<div>
+    <h2>Your Wishlist</h2>
+    <ul id="wishlist-items">
+      <% wishlist.products.forEach(product => { %>
+        <li><%= product.name %> - <%= product.price %></li>
+      <% }) %>
+    </ul>
+  </div>
