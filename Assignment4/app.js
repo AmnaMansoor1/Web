@@ -22,7 +22,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 // Use express-ejs-layouts
 app.use(expressLayouts);
-app.set("layout", "./layout");
+// app.set("layout", "./layout");
 // MongoDB connection
 mongoose
   .connect("mongodb://localhost:27017/Limelightdb")
