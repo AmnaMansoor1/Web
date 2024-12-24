@@ -1,0 +1,969 @@
+/* Reset default styles */
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+.header {
+    /* position: fixed; */
+    width: 100%;
+    overflow-x: hidden;
+    position: sticky;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 100;
+    top: 0;
+
+}
+/* Notification bar */
+.notification-bar {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    color: rgb(244, 14, 14);
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
+   
+}
+.scrolled .notification-bar{
+    top: -30px;
+
+}
+
+
+.top-bar, .navbar {
+  
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    z-index: 99;
+   
+    }
+
+
+/* Top Bar */
+.top-bar {
+    
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    background-color: black;
+    padding: 5px; /* Reduced padding */
+    color: white;
+}
+
+.contact-icons {
+    display: flex;
+    color: white;
+    gap: 15px; /* Use gap instead of margins for spacing */
+   
+    font-size: 18px;
+}
+.phoneicon {
+    margin: 0; /* Remove any extra margin around the phone icon */
+}
+
+
+.logo img {
+    margin: auto;
+    height: 5vh;
+    width: 100%;
+}
+/* Center Logo */
+.logo {
+    margin: auto; /* Centers logo */
+    margin-left: 12%;
+}
+
+.search-bar {
+    margin-left: 1%;
+    display: flex;
+    background-color: white;
+    border-radius: 25px;
+    padding: 5px 10px;
+    width: 250px;
+    height:30px ;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: black;
+}
+
+.cart-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-section a {
+    color: white;
+    margin-right: 10px;
+    font-size: 18px;
+    position: relative;
+}
+
+.cart-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-size: 10px;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+}
+
+.currency {
+    color: white;
+    margin-right: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    background-color :#F3F3F3;
+    width: 100%;
+    height:40px;
+    margin: 0;
+
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.nav-center {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+.nav-center li {
+    margin: 0 10px;
+}
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+.nav-icon-left, .nav-icon-right {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.nav-icon-right a {
+    text-decoration: none;
+     /* Removes the underline from the link */
+   
+}
+.nav-icon-right  {
+    text-decoration: none;
+     /* Removes the underline from the link */
+   
+}
+.nav-icon-left {
+    margin-top: -10px; /* Adjust the value as needed */
+} 
+/* Center the h4 title */
+.login-title {
+    text-align: center; /* Horizontally center the title */
+    font-size: 24px; /* Adjust font size as needed */
+    margin-bottom: 20px; /* Space between the title and the form */
+    font-weight: bold; /* Optional: make the title bold */
+}
+
+/* Centering the login form */
+.login-container {
+    background-color: #fff; /* White background for the form */
+    padding: 30px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow for a card effect */
+    width: 100%;
+    max-width: 400px; /* Optional: limit max width */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+h4 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 6px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.forgot-password {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.forgot-password a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.sign-up {
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+.sign-up {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.sign-up a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.sign-up a:hover {
+    text-decoration: underline;
+}
+/*--------------*/
+/* Sticky header effect for notification bar */
+.notification-bar.sticky {
+    display: none;
+}
+
+/* .search input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    margin-left: 5px;
+} */
+  /* Search icon styling */
+  .search-bar i {
+    font-size: 16px; /* Adjust icon size */
+    margin-right: 5px; /* Space between icon and input field */
+    position: relative;
+    top: -2px; /* Adjust upward position */
+  }
+  .cart-section .ri-truck-line {
+    font-size: 40px; /* Adjust to desired size */
+    color: #ffffff;     /* Optional: Change color */
+    
+}
+.cart-section a {
+    text-decoration: none; /* Removes the underline */
+}
+  .cart-section .ri-shopping-cart-2-line{
+    font-size: 30px; /* Adjust to desired size */
+    color: #ffffff;     /* Optional: Change color */
+  }
+
+/* Hero Section */
+#carouselExampleIndicators {
+    margin-top: 20px;
+    margin-bottom: 20px; /* Adjust as needed */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px; /* Set to your preferred width */
+}
+.circular-collection-wrapper-line {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #e7dfd6;
+    margin: 20px auto;
+  }
+.circular-collection-media {
+    text-decoration: none; /* Removes underline from links */
+}
+ /* circular divs */
+ .circular-collection-wrapper {
+    padding: 2rem 0;
+    padding-bottom: 0 !important;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+ .circular-collection-container {
+    margin: 0 auto;
+    width: 94%;
+}
+.circular-collection-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;  /* Ensures the container takes full width */
+    margin: 0 auto; /* Centers the container */
+    gap:unset;
+}
+
+.circular-collection-item {
+    flex: 0 0 21%; /* 4 items per row (25% width for each) */
+    margin-bottom: 1rem; /* Remove any margin between items */
+    padding-left: 2rem;
+    padding-right: 2rem;
+    flex-flow: column;
+    padding: 0; /* Remove any padding to avoid unwanted space */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    display: flex;
+    flex-direction: column;
+    align-items:stretch; /* Centers content horizontally */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+
+}
+
+.circular-collection-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto; /* Centers the circle inside the container */
+}
+
+
+.circular-collection-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.circular-collection-title h1 {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Make the layout responsive */
+@media (max-width: 1200px) {
+    .circular-collection-item {
+        width: 33.33%; /* 3 items per row on medium screens */
+    }
+}
+
+@media (max-width: 800px) {
+    .circular-collection-item {
+        width: 50%; /* 2 items per row on smaller screens */
+    }
+}
+
+@media (max-width: 500px) {
+    .circular-collection-item {
+        width: 100%; /* 1 item per row on very small screens */
+    }
+}
+
+.circular-collection-item:hover .circular-collection-circle {
+    border-color: #000; /* Change border color on hover */
+}
+
+.hero-section {
+    background-image: url('hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.shop-now-btn {
+    background-color: #e67e22;
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Categories Section */
+.categories {
+    padding: 20px;
+    text-align: center;
+}
+
+.category-grid {
+    display: flex;
+    justify-content: center; /* Center the items */
+    align-items: center; /* Align items vertically */
+    gap: 20px; /* Space between categories */
+    width: 98%;
+
+}
+
+.category-item {
+    text-align: center;
+    cursor: pointer;
+    justify-content: center;
+    display: flex;
+    gap: 0px;
+    width: 300px;
+    height: 212px;
+
+}
+
+.category-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.category-item img {
+    height: 212px;
+    max-width: 100%;
+    border-radius: 7%; /* Rounded corners for images  */
+    display: flex;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+
+
+}
+ /* making categories responsive  */
+ @media screen and (max-width: 767px){
+    .category-item img{
+        display: flex;
+        border-radius:7%;
+        max-width: 100%;
+        min-width: 71%;
+        justify-content: center;
+ }
+ }
+
+
+
+
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    height: 30px;
+}
+
+ /* to center align 8 divs
+  */
+  body {
+    font-family: Arial, sans-serif;
+}
+
+.circular-collection-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.circular-collection-heading-3 h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+/* ////-------------------------------------------------------------- */
+/* Container adjustments */
+.circular-collection-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.circular-collection-heading-3 h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Centered grid layout */
+.circular-collection-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items horizontally */
+    gap: 20px;
+}
+
+/* Ensuring circular items */
+.circular-collection-item {
+    text-align: center;
+    cursor: pointer;
+}
+
+.circular-collection-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the div circular */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+}
+
+.circular-collection-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the circle */
+}
+
+.circular-collection-title h1 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* ////---------------- */
+/* .circular-collection-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.circular-collection-item {
+    flex: 1 1 calc(25% - 40px); /* 4 items per row, adjust as necessary */
+    /* max-width: calc(25% - 40px);
+    text-align: center; */
+/* } */
+.circular-img-container {
+    width: 100%; /* Make the image container fill the square */
+    height: 100%; /* Ensure it fills the height */
+    border-radius: 50%; /* Make the image circular */
+    overflow: hidden; /* Hide overflow content */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+
+}
+
+
+.circular-collection-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the div circular */
+    overflow: hidden; /* Ensures the image stays within the circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5; /* Optional background color */
+}
+
+.circular-collection-circle img {
+    width: 100%; /* Makes the image cover the circle */
+    height: 100%; /* Ensures the image fills the container */
+    object-fit: cover; /* Keeps the aspect ratio of the image */
+    border-radius: 50%; /* Ensures the image itself is circular */
+}
+
+
+.circular-collection-title h1 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #333;
+} */
+.circular-img {
+    width: 80%; /* Control image size */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s;
+}
+
+.circular-collection-item:hover .circular-img {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.categories {
+    text-align: center; /* Center align the heading */
+}
+
+.category-grid {
+    display: flex; /* Display items in a row */
+    justify-content: center; /* Center the items horizontally */
+    gap: 20px; /* Space between items */
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column; /* Align text and image vertically */
+    align-items: center; /* Center align text and image */
+}
+
+.category-item img {
+    width: 100px; /* Set a specific width for the images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+ /* Accessories css  */
+ .accessories-slider {
+    text-align: center;
+    padding: 20px;
+}
+
+.accessories-slider h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.accessories-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+    scrollbar-width: thin; /* For Firefox */
+}
+
+.accessory-item {
+    flex: 0 0 auto; /* Ensure items don’t shrink */
+    text-align: center;
+    width: 120px;
+}
+
+.accessory-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.accessory-item p {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Optional: Hide scrollbar */
+.accessories-container::-webkit-scrollbar {
+    display: none; /* For Chrome, Edge, and Safari */
+}
+
+/* //-------------- */
+ /* new swiper */
+ .swiper{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style-type: none;
+    padding: 0;
+    z-index: 1;
+    display: block;
+ }
+ .swiper-container {
+    width: 100%;
+    max-width: 1200px; /* Restrict the container's width */
+    margin: 0 auto; /* Center the container */
+    position: relative;
+}
+
+.swiper-wrapper {
+    display: flex;
+    transition-duration: 0.3s;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    border-radius: 10px; /* Rounded corners like the example */
+    display: block;
+    object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: #000;
+}
+/* ----------------------------cards--------------------------- */
+
+    
+    .card-img-top {
+      height: 250px;
+      object-fit: cover; /* Keeps images uniform */
+    }
+    .card-title {
+      font-size: 1.1rem; /* Adjust font size */
+    }
+    .card-text {
+      font-size: 1rem; /* Keep price readable */
+      color: #333; /* Ensure good contrast */
+    }
+    #show-more {
+      background-color: #007bff; /* Bootstrap primary color */
+      border: none;
+      border-radius: 5px;
+    }
+    #show-more:hover {
+      background-color: #0056b3; /* Darker blue for hover effect */
+    }
+  
+  
+
+
+ /* //---------------// */
+/* * Footer Styles */ 
+#footer-id{
+    background-color: #fffafa;
+    width: 100vw;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+}
+.footer {
+    width:100%;
+    /* margin: 0 auto; */
+    left: 0;
+    right: 0;
+    background-color: #FAFAFA;
+    color: #020000;
+    padding: 0;
+    margin-left: 0%;
+    margin-right: 0%;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Space between Customer Care and Information sections */
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    max-width: 200px;
+    text-align: left;
+}
+
+.footer-section h3 {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #050505;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 0;
+}
+
+.footer-social a img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-payment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.footer-payment p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-payment img {
+    width: 40px;
+    margin: 0 5px;
+}
+
+.footer-bottom {
+    font-size: 12px;
+    color: #888;
+    padding-top: 15px;
+}
+
+/* Social icons section */
+.list-social {
+    display: flex; /* Enables horizontal alignment */
+    gap: 10px; /* Adjust spacing between items */
+    padding: 0;
+    margin: 0;
+    list-style: none; 
+    /* Removes default list styling */
+    justify-content: center;
+    align-items: center;
+}
+
+.list-social__item {
+    display: flex; /* Ensures proper alignment of the links */
+}
+
+.list-social__link img {
+    display: block;
+    width: 30px; /* Consistent icon size */
+    height: 30px;
+}
+ /* payment methods */
+ .footer-payment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+ }
+.whatsapp-icon-main {
+      margin-left: 20px;
+      /* Adjust as needed */
+      margin-right: 0;
+      position: relative;
+      /* Allows the use of top property */
+      top: 9px;
+      /* Adjust as needed to slide lower */
+    }
