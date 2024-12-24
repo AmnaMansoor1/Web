@@ -1,0 +1,143 @@
+<html><head><style>
+        body {
+           background-color:rgb(255, 255, 255);
+            font-family: Arial, sans-serif;
+            margin-left: 350px;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 5px;
+            width: 500px; /* Increased width */
+        }
+        input, select {
+            width: 90%;
+            padding: 15px; /* Increased pvadding for larger fields */
+            margin: 10px 0;
+            font-size: 16px; /* Increased font size */
+        }
+        .error {
+            color: red;
+            font-size: 14px; /* Increased error message size */
+        }
+        h2 {
+            text-align: center;
+            font-size: 24px; /* Increased heading size */
+        }
+        button {
+            padding: 15px; /* Increased padding for button */
+            font-size: 16px; /* Increased font size for button */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Checkout Form</h2>
+    <form id="checkoutForm" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <span class="error" id="nameError"></span> 
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <span class="error" id="emailError"></span>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+        <span class="error" id="addressError"></span>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
+        <span class="error" id="cityError"></span>
+
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state" required>
+        <span class="error" id="stateError"></span>
+
+        <label for="postalCode">Postal Code:</label>
+        <input type="text" id="postalCode" name="postalCode" required>
+        <span class="error" id="postalCodeError"></span>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+            <option value="">Select a country</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="UK">UK</option>
+            <option value="Australia">Pakistan</option>
+            <option value="Others">Others</option>
+        </select>
+        <span class="error" id="countryError"></span>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        $(document).ready(function() {
+            $('#checkoutForm').submit(function(event) {
+                // Prevent form submission
+                event.preventDefault();
+
+                // Clear previous error messages
+                $('.error').text('');
+
+                // Flag to track validation
+                let isValid = true;
+
+                // Validate Name
+                if ($('#name').val().trim() === '') {
+                    $('#nameError').text('Name is required.');
+                    isValid = false;
+                }
+
+                // Validate Email
+                const email = $('#email').val().trim();
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (email === '') {
+                    $('#emailError').text('Email is required.');
+                    isValid = false;
+                } else if (!emailPattern.test(email)) {
+                    $('#emailError').text('Enter a valid email address.');
+                    isValid = false;
+                }
+
+                // Validate Address
+                if ($('#address').val().trim() === '') {
+                    $('#addressError').text('Address is required.');
+                    isValid = false;
+                }
+
+                // Validate City
+                if ($('#city').val().trim() === '') {
+                    $('#cityError').text('City is required.');
+                    isValid = false;
+                }
+
+                // Validate State
+                if ($('#state').val().trim() === '') {
+                    $('#stateError').text('State is required.');
+                    isValid = false;
+                }
+
+                // Validate Postal Code
+                if ($('#postalCode').val().trim() === '') {
+                    $('#postalCodeError').text('Postal code is required.');
+                    isValid = false;
+                }
+
+                // Validate Country
+                if ($('#country').val() === '') {
+                    $('#countryError').text('Country is required.');
+                    isValid = false;
+                }
+
+                // If all validations pass, display a success message
+                if (isValid) {
+                    alert('Form submitted successfully!');
+                    // You can add further actions here (like sending the form data)
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
